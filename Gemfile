@@ -8,9 +8,15 @@ gem 'rails', '3.1.0.rc1'
 gem 'sqlite3'
 
 # Marius explicitly added these gems:
-gem 'therubyracer'
+group :development, :test do
+  gem 'therubyracer'
+end
+group :production do
+  gem 'therubyracer-heroku'
+end
 gem 'execjs'
 gem 'haml'
+gem 'heroku'
 
 # Asset template engines
 gem 'sass'
