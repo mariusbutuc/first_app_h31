@@ -5,14 +5,14 @@ gem 'rails', '3.1.0.rc1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
 # Marius explicitly added these gems:
 group :development, :test do
   gem 'therubyracer'
+  gem 'sqlite3'
 end
 group :production do
   gem 'therubyracer-heroku'
+  gem 'pg'
 end
 gem 'execjs'
 gem 'haml'
