@@ -1,17 +1,18 @@
 !!! 5
 %head
-  %title FirstAppH31
+  %title First App H31
   = stylesheet_link_tag     'application'
   = javascript_include_tag  'application'
   = csrf_meta_tags
+
 %body
   %p.notice= notice
   %p.alert= alert
-  %nav
+  %nav{ style: 'float: right;' }
     %ul
       - if Rails.env.development?
-        %li 'dev, bitch!'
+        %li dev, bitch!
       - else
-        %li 'not yet!'
+        %li not yet!
 
   %section#content= yield
